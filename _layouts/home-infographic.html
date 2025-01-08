@@ -3,23 +3,16 @@
 layout: page
 ---
 <div class="row">
-  <div class="col-md-8">
-
-    {% include index/description.html %}
-
-    {% include index/carousel.html title="Sample Items" height=450 %}
-  
-  </div>
-  <div class="col-md-4">
-
-    {% include index/time.html %}
-
-    {% include index/featured-terms.html field="subject" title="Top Subjects" btn-color="primary" max=8 %}
-
-    {% include index/featured-terms.html field="creator" title="Creators" btn-color="success" max=8 %}
-
-    {% include index/objects.html %}
-
-  </div>
-  
+  <div id="learnerStats" class="container py-4"></div>
 </div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="/assets/js/learner-stats.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const stats = new LearnerStats('learnerStats');
+    stats.init();
+  });
+</script>
