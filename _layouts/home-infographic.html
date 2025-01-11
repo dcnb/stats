@@ -3,16 +3,39 @@
 layout: page
 ---
 <div class="row">
-  <div id="learnerStats" class="container py-4"></div>
+  
+</div>
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="chart-tab" data-bs-toggle="tab" data-bs-target="#chart" type="button" role="tab" aria-controls="chart" aria-selected="true">Chart</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table" type="button" role="tab" aria-controls="table" aria-selected="false">Table</button>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="chart" role="tabpanel" aria-labelledby="home-tab">
+    <div id="instructionCharts" class="container py-4"></div>
+  </div>
+  <div class="tab-pane fade" id="table" role="tabpanel" aria-labelledby="profile-tab">
+    <div id="learnerStats" class="container py-4"></div>
+  </div>
+  
 </div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="/assets/js/instruction-charts.js"></script>
 <script src="/assets/js/learner-stats.js"></script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const stats = new LearnerStats('learnerStats');
     stats.init();
+    const charts = new InstructionCharts('instructionCharts');
+    charts.init();
   });
+
 </script>
