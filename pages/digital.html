@@ -1,0 +1,40 @@
+---
+title: Digcoll
+layout: page
+permalink: /digital-collections.html
+---
+<div class="row">
+  
+</div>
+
+<ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="chart-tab" data-bs-toggle="tab" data-bs-target="#chart" type="button" role="tab" aria-controls="chart" aria-selected="true">Chart</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="table-tab" data-bs-toggle="tab" data-bs-target="#table" type="button" role="tab" aria-controls="table" aria-selected="false">Table</button>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="chart" role="tabpanel" aria-labelledby="home-tab">
+    <div id="collection-charts"></div>
+  </div>
+  <div class="tab-pane fade" id="table" role="tabpanel" aria-labelledby="profile-tab">
+    <div id="collections-stats"></div>
+  </div>
+  
+</div>
+
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<!-- Papa Parse for CSV parsing -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+<!-- Your charts script -->
+<script src="/assets/js/collection-charts.js"></script>
+<!-- Table script -->
+<script src="/assets/js/collection-stats.js"></script>
+
+
+
+
